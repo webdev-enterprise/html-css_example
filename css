@@ -1,0 +1,304 @@
+/* HEADER */
+
+header .field .content {
+	position: relative;
+    height: 140px;
+    display: flex;
+    align-items: center;
+	justify-content: flex-start;
+}
+
+header .field .content .logo {
+    margin: 0;
+    flex: 1;
+}
+
+header .field .content .logo a {
+    display: flex;
+    vertical-align: middle;
+    text-decoration: none;
+    color: #ffffff;
+    margin: 0;
+    font: 21px "ShareTechMono", sans-serif;
+    text-transform: uppercase;
+}
+
+header .field .content .logo a img {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+}
+
+header .field .content .logo a p {
+    display: inline-block;
+    margin: auto 0;
+}
+
+header .field .content .lang {
+    flex: 1;
+}
+
+header .field .content .lang a {
+    display: inline-block;
+    font: 21px "ShareTechMono", sans-serif;
+    color: #b2253c;
+    text-decoration: none;
+}
+
+header .field .content .lang a:nth-child(odd):hover {
+    color: #ffffff;
+    -webkit-transition: all 0.3s ease;;
+    -moz-transition: all 0.3s ease;;
+    -o-transition: all 0.3s ease;;
+    transition: all 0.3s ease;
+}
+
+header .field .content .lang a.selected { 
+    color: #ffffff;
+}
+
+header .field .content .lang a:nth-child(4) {
+    display: none;
+}
+
+header .field .content .lang a:nth-child(5) {
+    display: none;
+}
+
+header .field .content .menu {
+    display: flex;
+    flex: 2;
+    justify-content: flex-end;
+}
+
+
+header .field .content .menu p {
+    font: 19px "OpenSansRegular", sans-serif;
+    margin: 0;
+    padding-left: 120px;
+    background: url(../img/menu_burger.png) no-repeat center left;
+}
+
+header .field .content .menu p:hover {
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    color: #b2253c;
+    background: url(../img/menu.svg) no-repeat 30px center;
+    cursor: pointer;
+    
+}
+
+/* SECRET_MENU */
+
+@keyframes menuDown {
+    0% {
+		height: 0px;
+		
+	}
+	3% {
+		height: 10px; 
+	}
+	98% {
+		height: 520px; 
+	}
+    100% {
+		height: 530px;
+    }
+}
+
+@keyframes menuUp {
+	0% {
+		height: 0px;
+	}
+	3% {
+		height: 10px; 
+	}
+	98% {
+		height: 520px; 
+	}
+    100% {
+		height: 530px;
+    }
+}
+
+@keyframes hiddenMenuDown {
+    0% {
+		height: 0px;
+		opacity: 0;
+	}
+	3% {
+		height: 10px; 
+		opacity: 1;
+	}
+	98% {
+		height: 520px; 
+	}
+    100% {
+		height: 530px;
+		opacity: 1;
+    }
+}
+
+@keyframes hiddenMenuUp {
+	0% {
+		height: 0px;
+	}
+	3% {
+		height: 10px; 
+	}
+	98% {
+		height: 520px; 
+	}
+    100% {
+		height: 530px;
+    }
+}
+
+@keyframes backgroundFadeIn {
+	0% {
+		opacity: 0;
+		transform: translateX(-100%);
+	}
+    100% {
+		opacity: 1;
+		transform: translateX(0%);
+    }
+}
+
+@keyframes slideLeft {
+	0% {
+		transform: translateX(-1000%);
+		opacity: 0;
+	}
+	90% {
+		transform: translateX(-1000%);
+		opacity: 0;
+	}
+	91% {
+		opacity: 1;
+	}
+	100% {
+		transform: translateX(0%);
+		opacity: 1;
+	}
+}
+
+.menuSlideDown {
+	animation: menuDown 0.4s linear 0.1s normal forwards;
+}
+
+.menuSlideUp {
+	animation: menuUp 0.4s linear 0.1s reverse backwards;
+}
+
+.backgroundFadeIn {
+	animation: backgroundFadeIn 0.6s ease 0.4s normal forwards;
+}
+
+.slideLeft_1 {
+	animation: slideLeft 1.6s ease-out 0s normal forwards; 
+}
+
+.slideLeft_2 {
+	animation: slideLeft 1.6s ease-out 0.2s normal forwards;
+}
+
+.slideLeft_3 {
+	animation: slideLeft 1.6s ease-out 0.4s normal forwards;
+}
+
+.slideLeft_4 {
+	animation: slideLeft 1.6s ease-out 0.6s normal forwards;
+}
+
+.slideLeft_5 {
+	animation: slideLeft 1.6s ease-out 0.8s normal forwards;
+}
+
+.slideLeft_1u {
+	animation: slideLeft 1s ease-out 0s normal forwards; 
+}
+
+.slideLeft_2u {
+	animation: slideLeft 1s ease-out 0.2s normal forwards;
+}
+
+.slideLeft_3u {
+	animation: slideLeft 1s ease-out 0.4s normal forwards;
+}
+
+.slideLeft_4u {
+	animation: slideLeft 1s ease-out 0.6s normal forwards;
+}
+
+.slideLeft_5u {
+	animation: slideLeft 1s ease-out 0.8s normal forwards;
+}
+
+.slideLeft_6u {
+	animation: slideLeft 1s ease-out 1s normal forwards;
+}
+
+.hiddenMenuDown {
+	animation: hiddenMenuDown 0.4s linear 0.1s normal forwards;
+}
+
+.hiddenMenuUp {
+	animation: hiddenMenuUp 0.2s linear 0.1s reverse backwards;
+}
+
+.secret_menu {
+	z-index: 10; 
+	height: 0;
+	overflow: hidden;
+}
+
+.secret_menu .content {
+    width: 90%;
+	max-width: 1055px;
+}
+
+.secret_menu .content .menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;  
+	background: url(../img/secret_menu_bg.png) no-repeat center center;
+	height: 530px;
+	opacity: 0;
+}
+
+.secret_menu .content .menu a {
+    display: block;
+    font: 30px "ShareTechMono", sans-serif; 
+    color: #ffffff;
+	margin: 15px 0;
+	opacity: 0;
+}
+
+.secret_menu .content .menu a:hover {
+	color:  #b2253c;
+	-webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.secret_menu .content .menu .hidden_menu {
+	padding-left: 20px;
+	opacity: 0;
+	height: 0;
+}
+
+.secret_menu .content .menu .hidden_menu a {
+    text-decoration: none;
+    font: 22px "OpensansRegular", sans-serif;
+    margin: 5px;
+    text-align: right;
+}
+
+.secret_menu .content .menu .hidden_menu a:hover {
+    text-decoration: underline;
+}
